@@ -15,9 +15,9 @@
 ## 🎓 3 TP Reproductibles
 
 ```bash
-git clone <repo> rag-open-2026
+git clone crystalloide/rag-open-2026
 cd rag-open-2026
-docker-compose up -d
+docker compose up -d
 ollama pull llama3.1 mxbai-embed-large
 jupyter localhost:8888
 ```
