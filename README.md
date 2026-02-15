@@ -15,7 +15,7 @@
 ## 🎓 3 TP Reproductibles
 
 ```bash
-git clone https://github.com/crystalloide/rag-open-2026
+git clone https://github.com/crystalloide/rag-open-source-2026
 cd rag-open-2026
 docker compose up -d
 ollama pull llama3.1 mxbai-embed-large
