@@ -18,7 +18,7 @@
 git clone https://github.com/crystalloide/rag-open-source-2026
 cd rag-open-2026
 docker compose up -d
-# Voir les modèles dispo ici : https://ollama.com/library/llama3.1
+# Voir les modèles dispo ici : [![Modèles](https://ollama.com/library/llama3.1)](https://ollama.com/library/llama3.1)
 # Si en local : Choisir 1 des deux :  
 # ollama pull llama3.1
 # ollama pull llama3.1 mxbai-embed-large
