@@ -1,0 +1,40 @@
+version: '3.8'
+services:
+  postgres:
+    image: timescale/timescaledb-ha:pg16.0.latest
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: rag2026
+      POSTGRES_USER: rag
+      POSTGRES_DB: rag_local
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgvectorscale_data:/var/lib/postgresql/data
+      - ./init/init.sql:/docker-entrypoint-initdb.d/01-init.sql
+
+  ollama:
+    image: ollama/ollama:latest
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    command: serve
+
+  jupyter:
+    build: .
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./notebooks:/home/jovyan/work/notebooks
+    depends_on:
+      - postgres
+      - ollama
+    environment:
+      - POSTGRES_URL=postgresql://rag:rag2026@postgres:5432/rag_local
+      - OLLAMA_BASE_URL=http://ollama:11434
+    command: start-notebook.sh --NotebookApp.token='' --ip=0.0.0.0
+
+volumes:
+  pgvectorscale_data:
+  ollama_data:

@@ -1,0 +1,15 @@
+langgraph==0.2.28
+langchain-community==0.2.16
+langchain-ollama==0.2.2
+langchain-postgres==0.1.5
+pgvector==0.3.0
+psycopg[binary]==3.2.3
+sentence-transformers==3.1.1
+ollama==0.3.3
+pgvectorscale==0.3.1
+rich==13.9.3
+crewai==0.51.1
+crewai-tools==0.8.3
+pyautogen==0.3.1
+serper-dev==0.2.2
+python-dotenv==1.0.1
