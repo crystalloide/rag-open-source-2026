@@ -17,6 +17,10 @@
 ```bash
 git clone https://github.com/crystalloide/rag-open-source-2026
 cd rag-open-2026
+## On vérifie qu'un serveur n'est pas déjà lancé ( Ex. OLLAMA lancé en local)
+netstat -anl | grep 11434
+## Affichage en retour si déjà lancé :  tcp        0      0 127.0.0.1:11434         0.0.0.0:*               LISTEN
+
 docker compose up -d
 # Voir les modèles dispo ici : https://ollama.com/library/llama3.1
 # Si en local : Choisir 1 des deux :  
