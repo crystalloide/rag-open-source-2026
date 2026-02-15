@@ -26,8 +26,9 @@ docker compose up -d
 # Si en local : Choisir 1 des deux :  
 # ollama pull llama3.1
 # ollama pull llama3.1 mxbai-embed-large
-# Si OLLAMA utilisé via un conteneur (défaut): Choisir 1 des deux :  
-docker exec -it <ollama-container> ollama pull llama3.1:latest
+# Si OLLAMA utilisé via un conteneur (défaut): Choisir 1 des deux :  <ollama-container> = ollama dans notre cas
+docker exec -it ollama ollama pull llama3.1:latest
+docker exec -it ollama ollama pull mxbai-embed-large
 #docker exec -it <ollama-container> ollama pull mxbai-embed-large
 #Remarque : Les modèles Ollama (llama3.1, mxbai-embed-large) sont conservés dans le volume ollama_data même après docker-compose down (sauf si -v).
 jupyter localhost:8888
