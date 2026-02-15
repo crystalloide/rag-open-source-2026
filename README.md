@@ -31,7 +31,17 @@ docker exec -it ollama ollama pull llama3.1:latest
 docker exec -it ollama ollama pull mxbai-embed-large
 #docker exec -it <ollama-container> ollama pull mxbai-embed-large
 #Remarque : Les modèles Ollama (llama3.1, mxbai-embed-large) sont conservés dans le volume ollama_data même après docker-compose down (sauf si -v).
-jupyter localhost:8888
+## Lancement de Jupyter :
+# Ouvrir simplement dans votre navigateur
+http://localhost:8888
+
+## Ou si vous êtes sous WSL/Linux :
+xdg-open http://localhost:8888
+
+# Ou avec Firefox/Chrome
+firefox http://localhost:8888 &
+google-chrome http://localhost:8888 &
+
 ```
 
 ### TP1: LangGraph Agent (Déterministe)
