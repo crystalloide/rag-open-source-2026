@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   postgres:
-    image: timescale/timescaledb-ha:pg16.0.latest
+    image: timescale/timescaledb:latest-pg16
     restart: always
     environment:
       POSTGRES_PASSWORD: rag2026
